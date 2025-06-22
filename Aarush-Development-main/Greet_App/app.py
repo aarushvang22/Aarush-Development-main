@@ -1,18 +1,15 @@
 import datetime
 from flask import Flask, request
 
-app = Flask("Greeting")
+app = Flask(__name__)
 
 @app.route("/")
-def home():
+def index():
     return "This is your home page."
 
 @app.route("/greeting/<name>")
 def greeting(name):
     return f"Hello {name}"
-
-
-
 # /greet?name=John
 
 @app.route("/greetingWithParameters")

@@ -1,9 +1,9 @@
 from flask import Flask, request
 
-app = Flask("Word Counter")
+app = Flask(__name__)
 
 @app.route("/")
-def home():
+def index():
     return "This is your home page."
 
 @app.route("/counter")

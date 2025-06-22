@@ -1,9 +1,9 @@
 from flask import Flask
 
-app = Flask("Aarush")
+app = Flask(__name__)
 
 @app.route("/")
-def home():
+def index():
     return "This is your home page."
 
 @app.route("/biography")

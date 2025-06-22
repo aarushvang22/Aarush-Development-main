@@ -1,16 +1,14 @@
 from flask import Flask, request
 
-app = Flask("Login Simulation")
-
+app = Flask(__name__)
 
 users = {
     "admin": "12345678",
     "Harsh": "password456"
 }
 
-
 @app.route("/")
-def home():
+def index():
     return "This is your home page."
 
 @app.route("/login")
